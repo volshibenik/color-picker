@@ -5,7 +5,8 @@ import {
   ElementRef,
   AfterViewInit,
   HostListener,
-  EventEmitter
+  EventEmitter,
+  Output
 } from "@angular/core";
 
 @Component({
@@ -19,7 +20,7 @@ export class SliderComponent implements OnInit, AfterViewInit {
 
   private mousedown: boolean;
   private selectedHeight: number;
-  color = new EventEmitter<string>();
+  @Output() hue = new EventEmitter<string>();
 
   ngOnInit() {
     console.log("1", this.canvas);
@@ -31,7 +32,7 @@ export class SliderComponent implements OnInit, AfterViewInit {
 
   emitColor(x: number, y: number) {
     const rgba = this.getColorAtPosition(x, y);
-    this.color.emit(rgba);
+    this.hue.emit(rgba);
   }
 
   getColorAtPosition(x: number, y: number) {
@@ -40,7 +41,6 @@ export class SliderComponent implements OnInit, AfterViewInit {
   }
 
   onMouseDown(evt: MouseEvent) {
-    console.log(evt);
     this.mousedown = true;
     this.selectedHeight = evt.offsetY;
 
@@ -64,8 +64,6 @@ export class SliderComponent implements OnInit, AfterViewInit {
 
   draw() {
     const can = this.canvas.nativeElement;
-    console.log(can);
-
     if (!this.ctx) {
       this.ctx = can.getContext("2d");
     }
@@ -90,8 +88,6 @@ export class SliderComponent implements OnInit, AfterViewInit {
     this.ctx.closePath();
 
     if (this.selectedHeight) {
-      console.log("llllllllll");
-
       this.ctx.beginPath();
       this.ctx.strokeStyle = "white";
       this.ctx.lineWidth = 5;
@@ -100,6 +96,4 @@ export class SliderComponent implements OnInit, AfterViewInit {
       this.ctx.closePath();
     }
   }
-
-  kk() {}
 }

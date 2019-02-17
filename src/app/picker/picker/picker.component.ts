@@ -1,12 +1,18 @@
-import { Component, OnInit } from "@angular/core";
+import { Component } from "@angular/core";
 
 @Component({
   selector: "app-color-picker",
-  templateUrl: "./picker.component.html",
-  styles: []
+  templateUrl: "./picker.component.html"
 })
-export class PickerComponent implements OnInit {
-  constructor() {}
+export class PickerComponent {
+  hue: string;
+  color: string;
 
-  ngOnInit() {}
+  getHue(color: string) {
+    this.hue = color;
+  }
+
+  getColi(color: string) {
+    this.color = color;
+  }
 }

@@ -1,4 +1,7 @@
-<p>
-  text
-</p>
-<app-slider></app-slider>
+<app-slider (hue)="getHue($event)"></app-slider>
+<app-palette
+  [hue]="hue"
+  (color)="getColi($event)"
+  style="float: left"
+></app-palette>
+<p>{{ color }}</p>
