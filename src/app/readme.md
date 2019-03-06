@@ -6,3 +6,11 @@
 
 # DOM
 https://blog.angularindepth.com/working-with-dom-in-angular-unexpected-consequences-and-optimization-techniques-682ac09f6866
+
+# view container
+
+<ng-container #vc></ng-container>
+...
+@ViewChild('vc', *{read: ViewContainerRef}) viewContainer;
+
+viewContainer.createEmbeddedView(TemplateRef)
