@@ -12,11 +12,12 @@ https://blog.angularindepth.com/working-with-dom-in-angular-unexpected-consequen
 <ng-container #vc></ng-container>
 ```
 
-@ViewChild('vc', *{read: ViewContainerRef}*) viewContainer;
+@ViewChild('vc', **{read: ViewContainerRef}**) viewContainer;
 
 viewContainer.createEmbeddedView(TemplateRef)
 
 ```html
 <ng-template #t><span>I am span</span></ng-template>
 ```
-@ViewChild('t', *{read: TemplateRef}*) template: TemplateRef;
+@ViewChild('t', **{read: TemplateRef}**) template: TemplateRef;
+@ViewChild(**TemplateRef**) template: TemplateRef;
