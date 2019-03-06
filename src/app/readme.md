@@ -20,4 +20,5 @@ viewContainer.createEmbeddedView(TemplateRef)
 <ng-template #t><span>I am span</span></ng-template>
 ```
 @ViewChild('t', **{read: TemplateRef}**) template: TemplateRef;
+
 @ViewChild(**TemplateRef**) template: TemplateRef;
