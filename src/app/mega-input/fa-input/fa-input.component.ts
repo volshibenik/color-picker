@@ -1,4 +1,10 @@
-import { Component, ContentChild, OnInit, HostBinding, ElementRef } from "@angular/core";
+import {
+  Component,
+  ContentChild,
+  OnInit,
+  HostBinding,
+  ElementRef
+} from "@angular/core";
 import { InputDirDirective } from "../input-dir.directive";
 import { KkDirective } from "../kk.directive";
 
@@ -13,7 +19,7 @@ import { KkDirective } from "../kk.directive";
 })
 export class FaInputComponent implements OnInit {
   constructor(private hostElement: ElementRef) {
-    console.log('display native host elem', this.hostElement.nativeElement);
+    console.log("display native host elem", this.hostElement.nativeElement);
   }
   @ContentChild(KkDirective) kiss: KkDirective;
 
@@ -21,7 +27,7 @@ export class FaInputComponent implements OnInit {
   input: InputDirDirective;
 
   ngOnInit() {
-    console.log('uuu', this.input);
+    console.log("uuu", this.input, this.kiss);
   }
 
   @HostBinding("class.focus")

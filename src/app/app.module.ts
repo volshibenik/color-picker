@@ -6,9 +6,13 @@ import { PickerModule } from "./picker/picker.module";
 import { MegaInputComponent } from "./mega-input/mega-input.component";
 import { FaInputComponent } from "./mega-input/fa-input/fa-input.component";
 import { InputDirDirective } from "./mega-input/input-dir.directive";
-import { TempOutletComponent } from './temp-outlet/temp-outlet.component';
-import { ChildComponent } from './temp-outlet/child.component';
-import { KkDirective } from './mega-input/kk.directive';
+import { TempOutletComponent } from "./temp-outlet/temp-outlet.component";
+import { ChildComponent } from "./temp-outlet/child.component";
+import { KkDirective } from "./mega-input/kk.directive";
+import { DomW2Module } from "./dom-w2/dom-w2.module";
+import { FormesModule } from "./forms/forms.module";
+import { FormsModule } from "@angular/forms";
+import { DWorkshopModule } from "./d-workshop/d-workshop.module";
 
 @NgModule({
   declarations: [
@@ -20,8 +24,15 @@ import { KkDirective } from './mega-input/kk.directive';
     ChildComponent,
     KkDirective
   ],
-  imports: [BrowserModule, PickerModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    PickerModule,
+    DomW2Module,
+    DWorkshopModule,
+    FormesModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

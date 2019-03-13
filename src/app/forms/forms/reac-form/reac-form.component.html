@@ -1,0 +1,19 @@
+<form>
+  <label for="">Name</label>
+  <input type="text" [formControl]="name" />
+
+  <label for="">Age</label>
+  <input type="text" [formControl]="age" />
+
+  <h2>Contacts:</h2>
+  <div>
+    <label for="">type</label>
+    <select>
+      <option value="home">Home</option>
+      <option value="work">Work</option>
+    </select>
+
+    <label for="">Number</label>
+    <input type="text" />
+  </div>
+</form>
