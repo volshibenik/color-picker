@@ -13,6 +13,7 @@ import { DomW2Module } from "./dom-w2/dom-w2.module";
 import { FormesModule } from "./forms/forms.module";
 import { FormsModule } from "@angular/forms";
 import { DWorkshopModule } from "./d-workshop/d-workshop.module";
+import { HabrListModule } from "./habr-list/habr-list.module";
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { DWorkshopModule } from "./d-workshop/d-workshop.module";
     PickerModule,
     DomW2Module,
     DWorkshopModule,
-    FormesModule
+    FormesModule,
+    HabrListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
