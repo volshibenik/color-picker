@@ -6,6 +6,7 @@ import { DomW2Component } from "./dom-w2.component";
 import { ComZComponent } from "./com-z/com-z.component";
 import { DirZDirective } from "./com-z/dir-z.directive";
 import { DirTplDirective } from "./com-z/dir-tpl.directive";
+import { DirYDirective } from "./com-z/dir-y.directive";
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { DirTplDirective } from "./com-z/dir-tpl.directive";
     DomW2Component,
     ComZComponent,
     DirZDirective,
-    DirTplDirective
+    DirTplDirective,
+    DirYDirective
   ],
   entryComponents: [ComAComponent, ComBComponent],
   imports: [CommonModule],

@@ -7,6 +7,7 @@ import { Component, OnInit } from "@angular/core";
     <ng-template #t><p>blabla</p></ng-template>
 
     <com-a><p>aaa</p></com-a>
+    <div *dirTpl><p>papapapapapapap</p></div>
   `,
   styles: [
     `

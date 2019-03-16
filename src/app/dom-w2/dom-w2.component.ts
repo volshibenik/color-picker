@@ -12,6 +12,7 @@ import { ComBComponent } from "./com-b/com-b.component";
 @Component({
   selector: "app-dom-w2",
   template: `
+    <div dirY>DOM-2W</div>
     <button (click)="show('a')">show A</button>
     <button (click)="show('b')">show B</button>
     <ng-container #c>as</ng-container>

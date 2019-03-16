@@ -14,6 +14,7 @@ import { FormesModule } from "./forms/forms.module";
 import { FormsModule } from "@angular/forms";
 import { DWorkshopModule } from "./d-workshop/d-workshop.module";
 import { HabrListModule } from "./habr-list/habr-list.module";
+import { HostBModule } from "./host-b/host-b.module";
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { HabrListModule } from "./habr-list/habr-list.module";
     DomW2Module,
     DWorkshopModule,
     FormesModule,
-    HabrListModule
+    HabrListModule,
+    HostBModule
   ],
   providers: [],
   bootstrap: [AppComponent]
